@@ -1,0 +1,95 @@
+C:\Users\user\Documents\Visual Studio 2008\Projects\training\training\bin\Debug\training.exe
+C:\Users\user\Documents\Visual Studio 2008\Projects\training\training\bin\Debug\training.pdb
+C:\Users\user\Documents\Visual Studio 2008\Projects\training\training\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2008\Projects\training\training\obj\Debug\training.Form1.resources
+C:\Users\user\Documents\Visual Studio 2008\Projects\training\training\obj\Debug\training.Properties.Resources.resources
+C:\Users\user\Documents\Visual Studio 2008\Projects\training\training\obj\Debug\training.csproj.GenerateResource.Cache
+C:\Users\user\Documents\Visual Studio 2008\Projects\training\training\obj\Debug\training.exe
+C:\Users\user\Documents\Visual Studio 2008\Projects\training\training\obj\Debug\training.pdb
+C:\Users\user\Documents\Visual Studio 2008\Projects\training\training\obj\Debug\training.Form2.resources
+C:\Users\user\Documents\Visual Studio 2008\Projects\training\training\obj\Debug\training.Form3.resources
+C:\Users\user\Documents\Visual Studio 2008\Projects\training\training\obj\Debug\training.Form4.resources
+C:\Users\user\Documents\Visual Studio 2008\Projects\training\training\obj\Debug\training.Form5.resources
+C:\Users\user\Documents\Visual Studio 2008\Projects\training\training\obj\Debug\training.Form6.resources
+C:\Users\user\Documents\Visual Studio 2008\Projects\training\training\obj\Debug\training.Form7.resources
+C:\Users\user\Documents\Visual Studio 2008\Projects\training\training\obj\Debug\training.Form8.resources
+C:\Users\user\Documents\Visual Studio 2008\Projects\training\training\obj\Debug\training.Form9.resources
+E:\C#\Major Project\training\training\obj\Debug\training.exe
+E:\C#\Major Project\training\training\obj\Debug\training.pdb
+E:\C#\Major Project\training\training\bin\Debug\training.exe
+E:\C#\Major Project\training\training\bin\Debug\training.pdb
+E:\C#\Major Project\training\training\obj\Debug\ResolveAssemblyReference.cache
+E:\C#\Major Project\training\training\obj\Debug\training.Form8.resources
+E:\C#\Major Project\training\training\obj\Debug\training.Form9.resources
+E:\C#\Major Project\training\training\obj\Debug\training.Properties.Resources.resources
+E:\C#\Major Project\training\training\obj\Debug\training.csproj.GenerateResource.Cache
+E:\C#\Major Project\training\training\obj\Debug\training.regteacher.resources
+E:\C#\Major Project\training\training\obj\Debug\training.st_reg_display.resources
+E:\C#\Major Project\training\training\obj\Debug\training.login.resources
+E:\C#\Major Project\training\training\obj\Debug\training.teacher.resources
+E:\C#\Major Project\training\training\obj\Debug\training.director.resources
+E:\C#\Major Project\training\training\obj\Debug\training.student.resources
+E:\C#\Major Project\training\training\obj\Debug\training.te_reg_display.resources
+E:\C#\Major Project\training\training\obj\Debug\training.regstudent.resources
+E:\C#\Major Project\training\training\obj\Debug\training.sfeedback.resources
+E:\C#\Major Project\training\training\obj\Debug\training.tfeedback.resources
+E:\C#\Major Project\training\training\obj\Debug\training.career_advisor.resources
+E:\C#\Major Project\training\training\obj\Debug\training.project_allotment.resources
+E:\C#\Major Project\training\training\obj\Debug\training.new_batch.resources
+E:\C#\Major Project\training\training\obj\Debug\training.Form1.resources
+E:\SPIC project\training\training\obj\Debug\training.exe
+E:\SPIC project\training\training\obj\Debug\training.pdb
+E:\SPIC project\training\training\bin\Debug\training.exe
+E:\SPIC project\training\training\bin\Debug\training.pdb
+E:\SPIC project\training\training\obj\Debug\ResolveAssemblyReference.cache
+E:\SPIC project\training\training\obj\Debug\training.regstudent.resources
+E:\SPIC project\training\training\obj\Debug\training.regteacher.resources
+E:\SPIC project\training\training\obj\Debug\training.login.resources
+E:\SPIC project\training\training\obj\Debug\training.teacher.resources
+E:\SPIC project\training\training\obj\Debug\training.career_advisor.resources
+E:\SPIC project\training\training\obj\Debug\training.student.resources
+E:\SPIC project\training\training\obj\Debug\training.project_allotment.resources
+E:\SPIC project\training\training\obj\Debug\training.Properties.Resources.resources
+E:\SPIC project\training\training\obj\Debug\training.csproj.GenerateResource.Cache
+E:\SPIC project\training\training\obj\Debug\training.Form1.resources
+E:\SPIC project\training\training\obj\Debug\training.newbatch.resources
+E:\SPIC project\training\training\obj\Debug\training.course_time.resources
+E:\SPIC project\training\training\obj\Debug\training.MDIParent1.resources
+E:\SPIC project\training\training\obj\Debug\training.Administrator.resources
+E:\SPIC project\training\training\obj\Debug\training.director_page.resources
+E:\SPIC project\training\training\obj\Debug\training.Download_Assign.resources
+E:\SPIC project\training\training\obj\Debug\training.Sub_Assign.resources
+E:\SPIC project\training\training\obj\Debug\training.Attendence.resources
+E:\SPIC project\training\training\obj\Debug\training.view_attendence.resources
+E:\SPIC project\training\training\obj\Debug\training.regcarrieraddr.resources
+E:\SPIC project\training\training\obj\Debug\training.regdirector.resources
+C:\Documents and Settings\Ankur\Desktop\15-8-2010 project\SPIC project\training\training\obj\Debug\training.exe
+C:\Documents and Settings\Ankur\Desktop\15-8-2010 project\SPIC project\training\training\obj\Debug\training.pdb
+G:\SPIC project\training\training\obj\Debug\training.exe
+G:\SPIC project\training\training\obj\Debug\training.pdb
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.exe
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.pdb
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.Administrator.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.Attendence.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.career_advisor.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.course_time.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.director_page.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.Form1.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.Download_Assign.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.Sub_Assign.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.MDIParent1.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.newbatch.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.regcarrieraddr.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.regdirector.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.regstudent.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.regteacher.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.login.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.teacher.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.student.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.project_allotment.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.Properties.Resources.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.view_attendence.resources
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\obj\Debug\training.csproj.GenerateResource.Cache
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\bin\Debug\training.exe
+C:\Users\Prabhjot Singh\Documents\SPIC project 2108\training\training\bin\Debug\training.pdb

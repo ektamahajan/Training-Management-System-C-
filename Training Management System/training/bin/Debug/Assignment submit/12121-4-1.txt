@@ -1,0 +1,68 @@
+ public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        SqlConnection con = new SqlConnection("server=LOVY\\SQLEXPRESS;uid=sa;pwd=;database=lovy");
+         string str;
+         string assn;
+         private void button1_Click(object sender, EventArgs e)
+         {
+             try
+             {
+                 OpenFileDialog op1 = new OpenFileDialog();
+
+                 op1.Filter = "TXTfiles(* .txt Files) |*.txt";
+                 op1.ShowDialog();
+
+                 str = op1.FileName;
+
+                 string densti = Application.StartupPath.ToString();
+                 assn = densti + "\\ASSIGNMENT\\" + textBox1.Text + str.Substring(str.Length - 4);
+
+
+             }
+             catch (Exception ep)
+             {
+                 MessageBox.Show(ep.Message.ToString());
+             }
+
+         }
+
+     
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            File.Copy(str, assn);
+            SqlCommand cmd=new SqlCommand();
+            con.Open();
+            cmd.CommandText="insert into teacherassign(batchcode,assno,allocatedate,subdate,asscode,assitopic,path) values( @batchcode,@assno,@allocatedate,@subdate,@asscode,@assitopic,@path)";
+            cmd.Parameters.AddWithValue("@batchcode",comboBox1.Text);
+            cmd.Parameters.AddWithValue("@assno",comboBox2.Text);
+            cmd.Parameters.AddWithValue("@allocatedate",dateTimePicker1.Value);
+            cmd.Parameters.AddWithValue("@subdate",dateTimePicker2.Value);
+            cmd.Parameters.AddWithValue("@asscode",textBox1.Text);
+            cmd.Parameters.AddWithValue("@assitopic",textBox2.Text);
+            cmd.Parameters.AddWithValue("@path",assn);
+            cmd.Connection=con;
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Save");
+            con.Close();
+            cmd.Dispose();
+            
+            comboBox2.Items.Remove(comboBox2.SelectedItem.ToString());
+            this.Close();
+            
+        }
+
+        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
+        {
+            dateTimePicker2.Text = dateTimePicker1.Value.AddDays(15).ToShortDateString();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            dateTimePicker2.Text = dateTimePicker1.Value.AddDays(15).ToShortDateString();
+        }

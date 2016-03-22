@@ -1,0 +1,102 @@
+o Module 1
+Windows Server 2003 Environment Management
+and Maintenance
+. Installing, Licensing, and Updating Windows Server 2003. 
+. Configuring Windows Server 2003 Hardware. 
+. Managing Users, Groups, and Computers. 
+. Managing Disks. 
+. Accessing Files and Folders. 
+. Managing Web Services. 
+. Managing Printing. 
+. Administering Terminal Services. 
+. Optimizing Windows Server 2003. 
+. Performing System Recovery Functions. 
+
+o Module 2
+Windows XP Professional
+-Getting Started with Windows XP Professional
+-Automating the Windows XP Installation
+-Upgrading to Windows XP Professional
+-Configuring the Windows XP Environment
+-Managing the Windows XP Professional Desktop
+-Managing Users and Groups
+-Managing Security
+-Managing Disks
+-Accessing Files and Folders
+-Managing Network Connections
+-Managing Printing
+-Dial-Up Networking and Internet Connectivity
+-Optimizing Windows XP
+-Performing System Recovery Functions
+
+o Module 3
+Windows Server 2003 Network infrastructure implementation  Managementand Maintenance
+Understanding Windows Server 2003 Networking. 
+-Installing and Configuring TCP/IP. 
+-Administering Security Policy. 
+-Managing IP Security. 
+-Managing the Dynamic Host Configuration Protocol (DHCP). 
+-Installing and Managing Domain Name System (DNS). 
+-Managing Remote Access Services. 
+-Managing User Access to Remote Access Services. 
+-Managing IP Routing. 
+
+o Module  4  minor project
+
+o Module 5
+-Planning and Maintaining  Windows Server 2003
+-Network infrastructure
+-Chapter 1: Planning a Network Infrastructure: A Technology Primer. 
+-Chapter 2: Planning a TCP/IP Network Infrastructure. 
+-Chapter 3: Planning a Network Connectivity Strategy. 
+-Chapter 4: Planning a DNS Strategy. 
+-Chapter 5: Planning a WINS Strategy. 
+-Chapter 6: Planning Secure Network Access. 
+-Chapter 7: Planning Server-Level Security. 
+-Chapter 8: Planning Certificate Services. 
+-Chapter 9: Planning High Availability Services. 
+-Chapter 10: Planning Network Monitoring, Remote Admin., and Recovery.
+
+
+
+o Module 6
+-Planning, Implementing, and Maintaining a Microsoft Windows Server 2003 Active Directory Infrastructure. 
+-Chapter 1: Overview of Active Directory. 
+-Chapter 2: Planning and Installing Active Directory. 
+-Chapter 3: Installing and Managing Trees and Forests. 
+-Chapter 4: Configuring Sites and Managing Replication. 
+-Chapter 5: Administering Active Directory. 
+-Chapter 6: Planning Security for Active Directory. 
+-Chapter 7: Active Directory Optimization and Reliability. 
+-Chapter 8: Planning, Implementing, and Managing Group Policy. 
+-Chapter 9: Software Deployment through Group Policy. 
+
+o Module 7
+-Exchange server 2003 implementation 
+and management 
+-Introduction to  Microsoft Exchange
+-Microsoft Exchange Architecture
+-Installing Microsoft Exchange server 2003
+-Creating and managing exchange Recipients
+-Using public folders
+-Configuring client access
+-Building administrating and routing groups
+-Configuring information store
+-Administration and maintenance
+-Coexisting and migrating from exchange 5.5
+-Coexisting and upgrading from exchange 2000
+-Connecting with other messaging systems
+-Backup and recovery
+
+o Module 8
+-Windows Server 2003 Active Directory
+and Network Infrastructure Design
+-Designing the Active Directory Forest Structure. 
+-Designing the Active Directory Domain Structure. 
+-Designing an Organizational Unit Structure for Administrative Purposes. 
+-Designing Organizational Units for Group Policy. 
+-Designing the Site Topology. 
+-Designing Remote Access. 
+-Analyzing Name Resolution
+
+o Module  9  Major project

@@ -1,0 +1,30 @@
+Microsoft Certified Systems Engineer (MCSE 2003) 
+MCSEs are qualified to effectively plan, implement, maintain and support, information systems in wide range of computing Environment with Windows 2003 and Microsoft Back Office.
+
+The duration of the course is 4½ months.
+MCSE candidates on the Microsoft Windows Server 2003 track are required to satisfy the following requirements : 
+
+•	Core Exams (6 Exams Required) 
+•	 Four networking system exams 
+•	 One client operating system exam 
+•	 One design exam 
+Elective exams (one exam required)
+The elective exams provide a valid and reliable measure of technical proficiency and expertise in solution design and implementation. MCSE candidates should also have at least one year of experience implementing and administering a network operating system, implementing and administering a client operating system, and designing a network infrastructure. Individuals who earned the MCSE certification on Windows NT® 4.0 by February 28, 2001 remain certified. To learn more about changes in the certification policy, see the Microsoft Enhances Its Certification Program page. •   Core Exams (6 Exams Required) •   Networking System (4 Exams Required) 
+•	 Managing and Maintaining a Microsoft Windows 2003 Environment (Exam 70-290) 
+•	 Implement, Managing, and Maintaining a Microsoft windows 2003 Network Infrastructure (Exam 70-291) 
+•	 Planning and Maintaining a windows 2003 Network Infrastructure (Exam 70-293) 
+•	 Planing, Implementing, and Maintaining MS Windows server 2003 Active Directory Infrastructure. (Exam 70-294) 
+•   Client Operating System (1 Exams Required) 
+•	 Installing, Configuring, Administring MS Windows XP Professsional. (Exam 70-270) 
+•	 Installing, Configuring, Administring MS Windows XP Professsional. (Exam 70-210) 
+•   Design (1 Exams Required) 
+•	 Designing a MS Windows 2003 Active Directory and Network Infrastructure. (Exam 70-297) 
+•	 Designing Security for a Microsoft Windows Server 2003 Network. (Exam 70-298) 
+
+•   Elective Exams (1 Exams Required) •	 Installing, Configuring, and Administering MS Internet Sequirity and Acceleration (ISA) Server 2000, Enterprise Edition. (Exam 70-227) 
+•	 Installing, Configuring and Administering MS SQL Server 2000 Enterprise Edition. (Exam 70-228) 
+•	 Designing and Implementing Databases with MS SQL Server 2000 Enterprise Edition. (Exam 70-229) 
+•	 Implementing and Managing Microsoft Exchange Server 2003. (Exam 70-284) 
+•	 Designing a MS Windows 2003 Active Directory and Network Infrastructure. (Exam 70-297) 
+•	 Designing Security for a Microsoft Windows Server 2003 Network. (Exam 70-298) 
+•	 Implementing and Administering Security in a Microsoft Windows Server 2003 Network. (Exam 70-299) 

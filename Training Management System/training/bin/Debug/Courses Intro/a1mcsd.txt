@@ -1,0 +1,25 @@
+MCSD for Microsoft .Net Certification Requirements 
+
+The Microsoft Certified Solution Developer (MCSD) for Microsoft .NET credential is the top-level certification for advanced developers who design and develop leading-edge enterprise solutions, using Microsoft development tools and technologies as well as the Microsoft .NET Framework.
+
+
+   Specifications :
+
+Name : MCSD for Microsoft .Net Certification Requirements 
+Duration : 5 months 
+
+   Contents: 
+
+Required Exams (5) 
+    
+•	     Exam 70-305: developing and implementing web applications with Microsoft Visual Basic .Net and Microsoft Visual Studio .Net 
+Or 
+•	     Exam 70-315: developing and implementing web applications with C sharp. 
+•	     Exam 70-306: developing and implementing windows based applications with Microsoft Visual Basic .Net and Microsoft Visual Studio .Net. 
+Or 
+•	     Exam 70-316: developing and implementing Windows applications with C sharp. 
+•	     Exam 70-310: devloping XML Web Services and and server components with Microsoft Visual Basic .net 
+•	     Exam 70-300: Analyzing requirments and defining Microsoft .Net Solution Architectures. 
+•	     Exam 70-229: Designing and Implementing database with Microsoft Sql Server TM 2000 Enterprise Edition. 
+
+

@@ -1,0 +1,53 @@
+o Module 1
+Windows Server 2003 Environment Management
+and Maintenance
+. Installing, Licensing, and Updating Windows Server 2003. 
+. Configuring Windows Server 2003 Hardware. 
+. Managing Users, Groups, and Computers. 
+. Managing Disks. 
+. Accessing Files and Folders. 
+. Managing Web Services. 
+. Managing Printing. 
+. Administering Terminal Services. 
+. Optimizing Windows Server 2003. 
+. Performing System Recovery Functions. 
+
+o Module 2
+Windows Server 2003 Network infrastructure implementation  Managementand Maintenance
+Understanding Windows Server 2003 Networking. 
+-Installing and Configuring TCP/IP. 
+-Administering Security Policy. 
+-Managing IP Security. 
+-Managing the Dynamic Host Configuration Protocol (DHCP). 
+-Installing and Managing Domain Name System (DNS). 
+-Managing Remote Access Services. 
+-Managing User Access to Remote Access Services. 
+-Managing IP Routing. 
+
+o Module 3
+SQL SERVER 2000 ADMINISTRATION
+-Introduction to sql server and Relational database
+-Installing ,upgrading and configuring SQL server 2000
+-SQl server tools,utilities and queries
+-Planning creating and managing a databse in sql server 2000
+-Security and sql server 2000
+-Implementing database backups and restorations
+-Managing your data
+-Implementing proactive administration and iis support in sql server 2000
+-Creating and implementing a replication solution in sql server 2000
+-Monitoring and optimizing sql server 2000
+
+o Module 4
+SQL Server 2000 Design
+-Creating and Maintaining Tables. 
+-Implementing Data Integrity. 
+-Creating and Maintaining Indexes. 
+-Creating and Maintaining Database Objects. 
+-Accessing Data. 
+-Modifying Data. 
+-Importing and Exporting Data. 
+-Locking. 
+-Developing a Security Plan.
+-Analyzing and Optimizing Data Access.
+
+o Module  5  Major project

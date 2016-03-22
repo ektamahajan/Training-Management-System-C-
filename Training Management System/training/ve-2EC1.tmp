@@ -1,0 +1,252 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.IO;
+using System.Data.SqlClient;
+namespace training
+{
+    public partial class login : Form
+    {
+        SqlConnection con = new SqlConnection();
+        public login()
+        {
+            InitializeComponent();
+        }
+        string path,path0, path2;
+
+        private void label1_MouseHover(object sender, EventArgs e)
+        {
+
+            colorchange();
+            label1.BackColor = Color.DarkKhaki;
+            tabControl1.Visible = false;
+            
+            string path1 = listBox1.Items[0].ToString();
+            richTextBox1.LoadFile(path0 + "\\" + path1, RichTextBoxStreamType.PlainText);
+            label9.Text = richTextBox1.Text;
+            label9.Visible = true;
+
+        }
+
+        
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            con.ConnectionString = "server=.;uid=sa;pwd=sa;database=general";
+            path =Application.StartupPath.ToString();
+            path0=path+"\\Main Page";
+            DirectoryInfo dir = new DirectoryInfo(path0);
+            FileInfo[] allfiles = dir.GetFiles();
+            foreach (FileInfo myfile in allfiles)
+            {
+                listBox1.Items.Add(myfile.Name.ToString());
+
+            }
+
+        }
+
+        
+
+
+
+
+        private void label6_MouseHover(object sender, EventArgs e)
+        {
+            colorchange();
+            label6.BackColor = Color.DarkKhaki;
+            tabControl1.Visible = false;
+            string path1 = listBox1.Items[4].ToString();
+            richTextBox1.LoadFile(path0 + "\\" + path1, RichTextBoxStreamType.PlainText);
+            label9.Text = richTextBox1.Text;
+            label9.Visible = true;
+
+
+        }
+
+
+
+
+
+        
+
+        
+
+        private void label5_MouseHover(object sender, EventArgs e)
+        {
+            colorchange();
+            label5.BackColor = Color.DarkKhaki;
+            tabControl1.Visible = false;
+            string path1 = listBox1.Items[4].ToString();
+            richTextBox1.LoadFile(path0 + "\\" + path1, RichTextBoxStreamType.PlainText);
+            label9.Text = richTextBox1.Text;
+            label9.Visible = true;
+        }
+
+        private void label4_MouseHover(object sender, EventArgs e)
+        {
+            colorchange();
+            label4.BackColor = Color.DarkKhaki;
+
+            label9.Visible = false;
+            path2 = Environment.CurrentDirectory.ToString() + "\\" + "Courses Intro";
+            DirectoryInfo dir = new DirectoryInfo(path2);
+            FileInfo[] allfiles = dir.GetFiles();
+            foreach (FileInfo myfile in allfiles)
+            {
+                listBox2.Items.Add(myfile.Name.ToString());
+
+            }
+            string path3 = listBox2.Items[0].ToString();
+            richTextBox1.LoadFile(path2 + "\\" + path3, RichTextBoxStreamType.PlainText);
+            label8.Text = richTextBox1.Text;
+            tabControl1.Visible = true;
+
+
+
+
+
+
+        }
+        public void colorchange()
+    {
+     label1.BackColor = Color.Khaki;
+    label2.BackColor = Color.Khaki;
+    label4.BackColor = Color.Khaki;
+    label5.BackColor = Color.Khaki;
+    label6.BackColor = Color.Khaki;
+    label7.BackColor = Color.Khaki;
+    }
+
+        private void label3_MouseHover(object sender, EventArgs e)
+        {
+            colorchange();
+            label5.BackColor = Color.DarkKhaki;
+            tabControl1.Visible = false;
+            string path1 = listBox1.Items[7].ToString();
+            richTextBox1.LoadFile(path0 + "\\" + path1, RichTextBoxStreamType.PlainText);
+            label9.Text = richTextBox1.Text;
+            label9.Visible = true;
+        }
+
+        private void label2_MouseHover(object sender, EventArgs e)
+        {
+            colorchange();
+            label2.BackColor = Color.DarkKhaki;
+            tabControl1.Visible = false;
+            string path1 = listBox1.Items[1].ToString();
+            richTextBox1.LoadFile(path0 + "\\" + path1, RichTextBoxStreamType.PlainText);
+            label9.Text = richTextBox1.Text;
+            label9.Visible = true;
+        }
+
+        private void label7_MouseHover(object sender, EventArgs e)
+        {
+            colorchange();
+            label7.BackColor = Color.DarkKhaki;
+            tabControl1.Visible = false;
+            string path1 = listBox1.Items[5].ToString();
+            richTextBox1.LoadFile(path0 + "\\" + path1, RichTextBoxStreamType.PlainText);
+            label9.Text = richTextBox1.Text;
+            label9.Visible = true;
+        }
+
+
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (tabControl1.SelectedIndex == 0)
+            {
+                richTextBox1.LoadFile(path2 + "\\" + listBox2.Items[0].ToString(), RichTextBoxStreamType.PlainText);
+                label8.Text = richTextBox1.Text;
+
+            }
+            if (tabControl1.SelectedIndex == 1)
+            {
+                richTextBox1.LoadFile(path2 + "\\" + listBox2.Items[1].ToString(), RichTextBoxStreamType.PlainText);
+                label13.Text = richTextBox1.Text;
+            }
+            if (tabControl1.SelectedIndex == 2)
+            {
+                richTextBox1.LoadFile(path2 + "\\" + listBox2.Items[2].ToString(), RichTextBoxStreamType.PlainText);
+                label14.Text = richTextBox1.Text;
+            }
+            if (tabControl1.SelectedIndex == 3)
+            {
+                richTextBox1.LoadFile(path2 + "\\" + listBox2.Items[3].ToString(), RichTextBoxStreamType.PlainText);
+                label15.Text = richTextBox1.Text;
+            }
+            if (tabControl1.SelectedIndex == 4)
+            {
+                richTextBox1.LoadFile(path2 + "\\" + listBox2.Items[4].ToString(), RichTextBoxStreamType.PlainText);
+                label16.Text = richTextBox1.Text;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+             con.Open();
+           SqlCommand cmd = new SqlCommand("Select password,Login_type from login where User_name='" + textBox1.Text + "'", con);
+            cmd.Connection = con;
+            SqlDataReader rd = cmd.ExecuteReader();
+            if ((rd.HasRows) == true)
+            {
+                rd.Read();
+                if (rd[0].ToString() == textBox2.Text)
+                {
+                   
+                     
+                    if(comboBox1.Text=="Teacher")
+                        {
+                           teacher f3 = new teacher();
+                           this.Hide();
+                           f3.Show();
+                        }
+                    if(comboBox1.Text=="Director")
+                        {
+                             director f4 = new director();
+                             this.Hide();
+                             f4.Show();
+                        }
+                    if(comboBox1.Text=="Career Advisor")
+                        {
+                             Form5 f5 = new Form5();
+                             this.Hide();
+                             f5.Show();
+                        }
+                     if(comboBox1.Text=="Student")
+                        {
+                             student f6 = new student();
+                             this.Hide();
+                             f6.Show();
+                        }
+                }
+                else
+                {
+                    MessageBox.Show("Password not matched");
+                }
+
+            }
+          else
+            {
+                MessageBox.Show("User not found");
+            }
+            con.Close();
+            cmd.Dispose();
+        
+        }
+
+        
+
+       
+     
+}
+      
+        
+   
+  }

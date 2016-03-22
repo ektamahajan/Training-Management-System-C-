@@ -1,0 +1,249 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+namespace training
+{
+   
+    public partial class regteacher : Form
+    {
+        string radio;
+        public regteacher()
+        {
+            InitializeComponent();
+        }
+        SqlConnection con = new SqlConnection("server=.;uid=sa;pwd=sa;database=teacher");
+        SqlCommand cmd = new SqlCommand();
+        string str;
+        private void label19_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog op1 = new OpenFileDialog();
+            op1.InitialDirectory = "c:\\";
+            op1.Filter = "Allfiles(*.all files ) |*.*";
+            op1.FilterIndex = 1;
+            if (op1.ShowDialog(this) == DialogResult.OK)
+            {
+                str = op1.FileName;
+                pictureBox1.Image = Image.FromFile(str);
+                label19.Visible = false;
+
+            }
+        }
+        public void clear()
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            maskedTextBox1.Clear();
+            textBox6.Clear();
+            textBox7.Clear();
+            textBox8.Clear();
+            textBox9.Clear();
+            textBox10.Clear();
+            textBox11.Clear();
+            textBox12.Clear();
+            maskedTextBox2.Clear();
+           
+        }
+        public void input()
+        {
+            cmd.Parameters.AddWithValue("@teacheridno", textBox1.Text);
+            cmd.Parameters.AddWithValue("@name", textBox2.Text);
+            cmd.Parameters.AddWithValue("@fname", textBox3.Text);
+            cmd.Parameters.AddWithValue("@dob", maskedTextBox1.Text);
+            cmd.Parameters.AddWithValue("@sex", radio);
+            cmd.Parameters.AddWithValue("@address", textBox6.Text);
+            cmd.Parameters.AddWithValue("@contactno", textBox7.Text);
+            cmd.Parameters.AddWithValue("@emailid", textBox8.Text);
+            cmd.Parameters.AddWithValue("@qualification", textBox9.Text);
+            cmd.Parameters.AddWithValue("@itback", textBox10.Text);
+            cmd.Parameters.AddWithValue("@specialinwhich", textBox11.Text);
+            cmd.Parameters.AddWithValue("@exprienaceduration", textBox12.Text);
+            cmd.Parameters.AddWithValue("@joiningdate", maskedTextBox2.Text);
+            //cmd.Parameters.AddWithValue("@resumeupload", textBox14.Text);
+            //cmd.Parameters.AddWithValue("@pic", pictureBox1);
+            
+          
+
+        }
+
+        public void filldata()
+        {
+            comboBox1.Items.Clear();
+            cmd.CommandText = "select teacheridno from tedata";
+            cmd.Connection = con;
+            con.Open();
+            SqlDataReader rd = cmd.ExecuteReader();
+            while (rd.Read())
+            {
+                comboBox1.Items.Add(rd[0].ToString());
+            }
+            rd.Close();
+            cmd.Dispose();
+            con.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            filldata();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                radio = radioButton1.Text;
+            }
+            if (radioButton2.Checked == true)
+            {
+                radio = radioButton2.Text;
+            }
+            if(textBox1.Text.Length>0)
+            {
+                
+                cmd.CommandText = "insert into tedata(teacheridno,name,fname,dob,sex,address,contactno,emailid,qualification,itback,specialinwhich,exprienaceduration,joiningdate) values(@teacheridno,@name,@fname,@dob,@sex,@address,@contactno,@emailid,@qualification,@itback,@specialinwhich,@exprienaceduration,@joiningdate)";
+                cmd.Parameters.AddWithValue("@teacheridno", textBox1.Text);
+                cmd.Parameters.AddWithValue("@name", textBox2.Text);
+                cmd.Parameters.AddWithValue("@fname", textBox3.Text);
+                cmd.Parameters.AddWithValue("@dob", maskedTextBox1.Text);
+                cmd.Parameters.AddWithValue("@sex", radio);
+                cmd.Parameters.AddWithValue("@address", textBox6.Text);
+                cmd.Parameters.AddWithValue("@contactno", textBox7.Text);
+                cmd.Parameters.AddWithValue("@emailid", textBox8.Text);
+                cmd.Parameters.AddWithValue("@qualification", textBox9.Text);
+                cmd.Parameters.AddWithValue("@itback", textBox10.Text);
+                cmd.Parameters.AddWithValue("@specialinwhich", textBox11.Text);
+                cmd.Parameters.AddWithValue("@exprienaceduration", textBox12.Text);
+                cmd.Parameters.AddWithValue("@joiningdate", maskedTextBox2.Text);
+                //cmd.Parameters.AddWithValue("@resumeupload", textBox14.Text);
+                //cmd.Parameters.AddWithValue("@pic", pictureBox1);
+                cmd.Connection = con;
+                con.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Inserted");
+                clear();
+                con.Close();
+                cmd.Dispose();
+                filldata();
+            }
+          else
+            {
+            MessageBox.Show("Enter information regarfing Teacher", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(textBox1.Text.Length>0)
+            {
+                SqlCommand cmd1 = new SqlCommand();
+                con.Open();
+                cmd1.CommandText = "update tedata set name=name,fname=@fname,dob=@dob,sex=@sex,address=@address,contactno=@contactno,emailid=@emailid,qualification=@qualification,itback=@itback,specialinwhich=@specialinwhich,exprienaceduration=@exprienaceduration,joiningdate=@joiningdate where teacheridno=@teacheridno";
+                cmd1.Parameters.AddWithValue("@teacheridno", textBox1.Text);
+                cmd1.Parameters.AddWithValue("@name", textBox2.Text);
+                cmd1.Parameters.AddWithValue("@fname", textBox3.Text);
+                cmd1.Parameters.AddWithValue("@dob", maskedTextBox1.Text);
+                cmd1.Parameters.AddWithValue("@sex", radio);
+                cmd1.Parameters.AddWithValue("@address", textBox6.Text);
+                cmd1.Parameters.AddWithValue("@contactno", textBox7.Text);
+                cmd1.Parameters.AddWithValue("@emailid", textBox8.Text);
+                cmd1.Parameters.AddWithValue("@qualification", textBox9.Text);
+                cmd1.Parameters.AddWithValue("@itback", textBox10.Text);
+                cmd1.Parameters.AddWithValue("@specialinwhich", textBox11.Text);
+                cmd1.Parameters.AddWithValue("@exprienaceduration", textBox12.Text);
+                cmd1.Parameters.AddWithValue("@joiningdate", maskedTextBox2.Text);
+                //cmd1.Parameters.AddWithValue("@resumeupload", textBox14.Text);
+                //cmd1.Parameters.AddWithValue("@pic", pictureBox1);
+                cmd1.Connection = con;
+                
+                cmd1.ExecuteNonQuery();
+                MessageBox.Show("Updated");
+                clear();
+                con.Close();
+                cmd1.Dispose();
+                button1.Enabled = true;
+                filldata();
+            }
+            else
+            {
+               MessageBox.Show("TeacherIdno must be filled","Delete",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(textBox1.Text.Length>0)
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "delete from tedata where teacheridno=@teacheridno";
+                cmd.Parameters.AddWithValue("@teacheridno", textBox1.Text);
+                cmd.Connection = con;
+                con.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Deleted");
+                clear();
+                con.Close();
+                cmd.Dispose();
+                button1.Enabled = true;
+                filldata();
+            }
+        else
+            {
+            MessageBox.Show("TeacherIdno must be filled", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+           
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "select * from tedata where teacheridno=@teacheridno";
+            cmd.Parameters.AddWithValue("@teacheridno", comboBox1.SelectedItem.ToString());
+            cmd.Connection = con;
+          
+            SqlDataReader rd = cmd.ExecuteReader();
+            rd.Read();
+            textBox1.Text = rd[0].ToString();
+            textBox2.Text = rd[1].ToString();
+            textBox3.Text = rd[2].ToString();
+            maskedTextBox1.Text = rd[3].ToString();
+            radio = rd[4].ToString();
+            textBox6.Text = rd[5].ToString();
+            textBox7.Text = rd[6].ToString();
+            textBox8.Text = rd[7].ToString();
+            textBox9.Text = rd[8].ToString();
+            textBox10.Text = rd[9].ToString();
+            textBox11.Text = rd[10].ToString();
+            textBox12.Text = rd[11].ToString();
+            maskedTextBox2.Text = rd[12].ToString();
+
+            if (radio == radioButton1.Text)
+            {
+                radioButton1.Checked = true;
+            }
+            if (radio == radioButton2.Text)
+            {
+                radioButton2.Checked = true;
+            }
+           
+            con.Close();
+            rd.Dispose();
+            cmd.Dispose();
+            button1.Enabled = false;
+        }
+
+        
+
+        
+    }
+}

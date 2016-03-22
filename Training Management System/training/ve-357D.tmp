@@ -1,0 +1,199 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.IO;
+
+namespace training
+{
+    public partial class career_advisor : Form
+    {
+        string path2;
+        public career_advisor()
+        {
+            InitializeComponent();
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+            panelhide();
+            
+        }
+
+        private void label1_MouseHover(object sender, EventArgs e)
+        {
+            label1.BackColor = Color.MediumPurple;
+            panelhide();
+            panel1.Visible = true;
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+            label1.BackColor = Color.Thistle;
+        }
+
+        private void label2_MouseHover(object sender, EventArgs e)
+        {
+            label2.BackColor = Color.MediumPurple;
+            panelhide();
+            panel2.Visible = true;
+        }
+
+        private void label2_MouseLeave(object sender, EventArgs e)
+        {
+            label2.BackColor = Color.Thistle;
+        }
+
+       private void label3_MouseHover(object sender, EventArgs e)
+        {
+            label3.BackColor = Color.MediumPurple;
+            panelhide();
+            panel2.Visible = true;
+        }
+
+        private void label3_MouseLeave(object sender, EventArgs e)
+        {
+            label3.BackColor = Color.Thistle;
+        }
+
+        private void label4_MouseHover(object sender, EventArgs e)
+        {
+            label4.BackColor = Color.MediumPurple;
+            panelhide();
+            panel3.Visible = true;
+        }
+
+        private void label4_MouseLeave(object sender, EventArgs e)
+        {
+            label4.BackColor = Color.Thistle;
+        }
+
+        private void label5_MouseHover(object sender, EventArgs e)
+        {
+            label5.BackColor = Color.MediumPurple;
+            panelhide();
+            
+            path2 = Environment.CurrentDirectory.ToString() + "\\" + "Course Details";
+            DirectoryInfo dir = new DirectoryInfo(path2);
+            FileInfo[] allfiles = dir.GetFiles();
+            foreach (FileInfo myfile in allfiles)
+            {
+                listBox2.Items.Add(myfile.Name.ToString());
+
+            }
+            string path3 = listBox2.Items[0].ToString();
+            richTextBox1.LoadFile(path2 + "\\" + path3, RichTextBoxStreamType.PlainText);
+            label8.Text = richTextBox1.Text;
+            tabControl1.Visible = true;
+            label15.Text = richTextBox1.Text;
+
+
+        }
+
+        private void label5_MouseLeave(object sender, EventArgs e)
+        {
+            label5.BackColor = Color.Thistle;
+        }
+
+        private void label6_MouseHover(object sender, EventArgs e)
+        {
+            label6.BackColor = Color.MediumPurple;
+            panelhide();
+            panel2.Visible = true;
+        }
+
+        private void label6_MouseLeave(object sender, EventArgs e)
+        {
+            label6.BackColor = Color.Thistle;
+        }
+
+        private void label7_MouseHover(object sender, EventArgs e)
+        {
+            label7.BackColor = Color.MediumPurple;
+            panelhide();
+            tabControl2.Visible = true;
+        }
+
+        private void label7_MouseLeave(object sender, EventArgs e)
+        {
+            label7.BackColor = Color.Thistle;
+            panelhide();
+            
+        }
+
+        private void label8_MouseHover(object sender, EventArgs e)
+        {
+            label8.BackColor = Color.MediumPurple;
+            panelhide();
+            panel4.Visible = true;
+        }
+
+        private void label8_MouseLeave(object sender, EventArgs e)
+        {
+            label8.BackColor = Color.Thistle;
+        }
+
+        public void panelhide()
+        {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            tabControl1.Visible = false;
+            tabControl2.Visible = false;
+            tabControl3.Visible = false;
+           
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            login f2 = new login();
+            f2.Show();
+            this.Hide();
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            regstudent s1 = new regstudent();
+            s1.Show();
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+            regteacher s2 = new regteacher();
+            s2.Show();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 0)
+            {
+                richTextBox1.LoadFile(path2 + "\\" + listBox2.Items[0].ToString(), RichTextBoxStreamType.PlainText);
+                label8.Text = richTextBox1.Text;
+
+            }
+            if (tabControl1.SelectedIndex == 1)
+            {
+                richTextBox1.LoadFile(path2 + "\\" + listBox2.Items[1].ToString(), RichTextBoxStreamType.PlainText);
+                label17.Text = richTextBox1.Text;
+            }
+            if (tabControl1.SelectedIndex == 2)
+            {
+                richTextBox1.LoadFile(path2 + "\\" + listBox2.Items[2].ToString(), RichTextBoxStreamType.PlainText);
+                label18.Text = richTextBox1.Text;
+            }
+            if (tabControl1.SelectedIndex == 3)
+            {
+                richTextBox1.LoadFile(path2 + "\\" + listBox2.Items[3].ToString(), RichTextBoxStreamType.PlainText);
+                label19.Text = richTextBox1.Text;
+            }
+        }
+
+       
+    }
+}

@@ -1,0 +1,301 @@
+Core Java : Module 1-Total Days-25
+
+Introduction to Java:
+•	History of Java
+•	Need for Java
+•	Java versions
+•	Features/Advantages of Java
+•	JVM Architecture
+•	Packages in Java
+
+Programming in Java:
+•	Programming Structure
+•	Variables/Constants
+•	Datatypes
+•	Various operators
+•	Access Specifiers & Modifiers
+•	Decision Making & Branching
+•	Decision Making & Looping
+
+Methods in Java:
+•	Introduction to Methods
+•	Argument passing mechanism
+•	Pass by value
+•	Pass by reference
+•	Arrays
+•	Wrapper Classes
+•	Manipulating strings
+
+
+OOPS Principle:
+
+•	Basic principles of OOPS
+•	Class & Object
+•	Access modifiers
+•	Constructors & destructors
+•	Static members
+
+
+
+Inheritance & Polymorphism:
+
+•	Inheritance & polymorphism
+•	Overloading methods
+•	Hiding methods
+•	Abstract class
+•	Abstract methods
+•	Multiple inheritance
+•	Interfaces
+•	Method Overriding
+
+Packages & Exception Handling
+
+•	Packages in Java
+•	Importing packages
+•	Creating User defined packages
+•	Exception Handling
+•	Built-in Exceptions
+•	User defined Exceptions
+
+Multithreading in Java
+
+•	Multithreading Concept
+•	Implementing multithreading in Java
+•	Thread Life Cycle
+•	Thread Priorities
+•	Thread Synchronization
+
+_____________________________________________________________
+
+Advanced Java- Module 2-Total Days-30
+
+Windows Programming:
+
+•	Introduction to GUI Programming
+•	Introduction to Frames
+•	Various component classes
+•	Creating Frames & Components in Java
+•	Invoking Properties & methods of components
+•	Overview of awt components
+
+Swings Programming
+
+•	Introduction to Swings
+•	Layout Managers
+•	Swings Vs AWT in Java
+•	GUI Programming using Swings
+
+Event Handling
+•	Event handling mechanism in Java
+•	Event Listeners & Event Handlers
+•	Handling mouse & keyboard listeners
+•	Using MouseListener & MouseMotionListener 
+
+Applet Programming
+•	Applet Introduction
+•	Applet Life Cycle
+•	Creating Web pages using Applet
+•	Handling Events on Applet
+
+I/O Programming 
+
+•	I/O Introduction
+•	Byte Streams & Character Streams
+•	Reading & Writing data
+•	Object Serialization & Deserialization
+
+
+Socket Programming
+
+•	Client Server Architecture
+•	Protocols Overview
+•	Client Server communication using TCP/IP
+
+
+
+
+Collections Framework
+•	Introduction to java.util package
+•	Various classes & interfaces
+•	Vector,Stack & Hashtable classes
+
+
+JDBC Programming
+•	JDBC API
+•	JDBC Architecture
+•	Classes & Interfaces of JDBC API
+•	Creating JDBC application
+•	Managing database transactions
+
+Advanced JDBC Programming
+
+•	Creating applications using PreparedStatement object
+•	Creating and calling stored procedures in JDBC
+•	Using Metadata in JDBC
+•	ResultSetMetaData & DatabaseMetaData interfaces
+
+
+
+
+SQl Server : Module 3-Total Days-15
+
+•	Features of MS-SQL server
+•	SQL-DDL,DML,DCL
+
+Using Select Statement
+
+•	Use the SELECT statement with logical operators
+•	Use wildcards
+•	Use the IS NULL and IS NOT NULL keywords
+•	Use the ORDER BY clause
+•	Use the TOP keyword
+•	Use the DISTINCT keyword 
+•	Use aggregate functions in queries
+•	Group result sets
+•	Use the COMPUTE and COMPUTE BY clause 
+
+
+Using functions
+•	String functions
+•	Mathematical functions
+•	Datetime functions
+
+
+
+Using JOINS
+•	Inner Join
+•	Outer Join
+•	Self Join
+•	Equi Join
+•	Natural Join
+•	Cross Join
+
+Using Subqueries
+•	Creating subqueries
+•	Use subqueries with the IN clause
+•	Use subqueries with the  EXISTS clause
+•	Use nested subqueries
+•	Use correlated subqueries
+
+Databases
+•	Creating database
+•	Viewing database
+•	Deleting database
+•	Renaming database
+
+
+Database Tables
+
+•	Create tables
+•	Insert rows into tables
+•	Delete tables
+•	Altering tables
+•	Create user-defined datatype
+•	List various types of data integrity 
+
+
+Add the following constraints to tables:
+•	PRIMARY KEY
+•	UNIQUE 
+•	FOREIGN KEY 
+•	CHECK 
+•	DEFAULT 
+
+DML Statement
+•	Maintain data in a table by using
+•	INSERT statement
+•	UPDATE statement
+•	DELETE statement
+•	Truncate a table
+
+Implementing Views & Batches
+•	Create, alter, drop, and rename views 
+•	Update data using views 
+•	Declare variables
+•	Print messages
+•	Use comments
+•	Use conditional statements
+•	Use the iteration statements
+
+Implementing Stored Procedures
+•	Create a stored procedure
+•	Execute a stored procedure
+•	Pass parameters to a stored procedure
+•	Modify a stored procedure
+•	Return values from a stored procedure
+•	Return multiple values from a stored procedure 
+•	Call a procedure from another stored procedure
+•	Recompile a stored procedure
+•	Drop a stored proced
+
+Backup & Recovery Procedure
+
+
+
+
+
+•	 J2EE: Module 4-Minor Project(Window Based)-Total Days-1
+
+
+•	Module 5-Total Days-30
+
+Overview of HTML
+
+•	HTML Introduction
+•	HTML Elements & Attributes
+•	Creating hyperlinks
+•	Creating Lists & Tables
+•	HTML Forms & Controls
+
+Overview of XML
+
+•	Introduction to XML
+•	Creating XML documents
+•	Introduction to parser
+•	Validating & Non-Validating parsers
+•	Introduction to DTD & XSD
+
+J2EE introduction
+•	J2EE Concept
+•	J2EE Architecture
+•	Application Server
+•	Web & EJB Server
+•	Configuring J2EE data source
+
+
+Servlet Programming
+
+•	Introduction to Servlets
+•	HttpServlets & GenericServlets
+•	Servlet mapping & configuration
+•	Inter-Servlet communication
+•	Security in Web Application
+Session Management
+
+JSP Programming
+
+•	Introduction to JSP
+•	JSP directives
+•	JSP Standard actions & Java beans
+•	User defined tags
+
+EJB Programming
+•	MVC Architecture
+•	EJB Introduction
+•	Different types of EJB
+•	Components of EJB
+•	Session Beans & Entity Beans
+•	Transaction Management
+
+Java Messaging Service
+•	JMS overview
+•	Queues and Topics
+•	Introduction to MDB
+
+
+
+Module 6-Total Days-60
+
+Major Project (Window based/Web based)
+
+Note: 10 Days are reserved for Assignment/Module Tests/Presentations.

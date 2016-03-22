@@ -1,0 +1,135 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace training
+{
+    public partial class Form4 : Form
+    {
+        public Form4()
+        {
+            InitializeComponent();
+        }
+
+        private void label1_MouseHover(object sender, EventArgs e)
+        {
+            colorchange();
+            label1.BackColor = Color.SteelBlue;
+            panelhide();
+            panel1.Visible = true;
+        }
+
+       
+
+        private void label2_MouseHover(object sender, EventArgs e)
+        {
+            colorchange();
+            label2.BackColor = Color.SteelBlue;
+            panelhide();
+            panel2.Visible = true;
+        }
+
+        private void label3_MouseHover(object sender, EventArgs e)
+        {
+            colorchange();
+            label3.BackColor = Color.SteelBlue;
+            panelhide();
+            tabControl1.Visible = true;
+        }
+
+        private void label4_MouseHover(object sender, EventArgs e)
+        {
+            colorchange();
+            label4.BackColor = Color.SteelBlue;
+            panelhide();
+            panel4.Visible = true;
+        }
+
+        private void label5_MouseHover(object sender, EventArgs e)
+        {
+            colorchange();
+            label5.BackColor = Color.SteelBlue;
+            panelhide();
+            panel3.Visible = true;
+        }
+
+        private void label6_MouseHover(object sender, EventArgs e)
+        {
+            colorchange();
+            label6.BackColor = Color.SteelBlue;
+            panelhide();
+            panel5.Visible = true;
+        }
+
+        private void label7_MouseHover(object sender, EventArgs e)
+        {
+            colorchange();
+            label7.BackColor = Color.SteelBlue;
+            panelhide();
+            tabControl2.Visible = true;
+        }
+
+        
+
+       
+        public void panelhide()
+        {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            tabControl1.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            tabControl2.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+        
+        }
+
+        private void label8_MouseHover(object sender, EventArgs e)
+        {
+            colorchange();
+            label8.BackColor = Color.SteelBlue;
+            panelhide();
+            panel6.Visible = true;
+            
+        }
+
+        
+        public void colorchange()
+        {
+            label1.BackColor = Color.LightSteelBlue;
+            label2.BackColor = Color.LightSteelBlue;
+            label3.BackColor = Color.LightSteelBlue;
+            label4.BackColor = Color.LightSteelBlue;
+            label5.BackColor = Color.LightSteelBlue;
+            label6.BackColor = Color.LightSteelBlue;
+            label7.BackColor = Color.LightSteelBlue;
+            label8.BackColor = Color.LightSteelBlue;
+        
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            panelhide();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            login f2 = new login();
+            f2.Show();
+            this.Hide();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
+    }
+}

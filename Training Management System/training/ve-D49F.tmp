@@ -1,0 +1,62 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+namespace training
+{
+    public partial class new_batch : Form
+    {
+        string radio, combo;
+        public new_batch()
+        {
+            InitializeComponent();
+        }
+        SqlConnection con = new SqlConnection();
+        SqlCommand cmd = new SqlCommand();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                radio = radioButton1.Text;
+                combo = comboBox1.SelectedText;
+            }
+            if (radioButton2.Checked == true)
+            {
+                radio = radioButton2.Text;
+                combo = comboBox2.SelectedText;
+
+            }
+            
+            con.Open();
+            cmd.CommandText = "insert into batch(batch_name,timing_from,timing_to,duration,,course,start_date,end_date,teacher,student) values(@batch_name,@timing_from,@timing_to,@duration,@course,@start_date,@end_date,@teacher,@student)";
+            cmd.Parameters.AddWithValue("@batch_name", textBox1.Text);
+            cmd.Parameters.AddWithValue("@timing_from", maskedTextBox3.Text);
+            cmd.Parameters.AddWithValue("@timing_to", maskedTextBox4.Text);
+            cmd.Parameters.AddWithValue("@duration", radio);
+            cmd.Parameters.AddWithValue("@course", combo);
+            cmd.Parameters.AddWithValue("@start_date", maskedTextBox1.Text);
+            cmd.Parameters.AddWithValue("@end_date", maskedTextBox2.Text);
+            cmd.Parameters.AddWithValue("@teacher", comboBox3.Text);
+            cmd.Parameters.AddWithValue("@student", listBox2.Items[0].ToString());
+           
+           
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Inserted");
+           
+            con.Close();
+            cmd.Dispose();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listBox2.Items.Add(listBox1.SelectedItem.ToString());
+        }
+    }
+}

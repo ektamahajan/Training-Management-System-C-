@@ -1,0 +1,140 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+namespace training
+{
+    public partial class project_allotment : Form
+    {
+        public project_allotment()
+        {
+            InitializeComponent();
+            
+        }
+        SqlConnection con = new SqlConnection();
+        SqlCommand cmd = new SqlCommand();
+       
+        
+        private void project_allotment_Load(object sender, EventArgs e)
+        {
+            con.ConnectionString = "server=.;uid=sa;pwd=sa;database= student";
+
+           
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+                listBox2.Items.Add(listBox1.SelectedItem.ToString());
+               
+            
+        }
+
+       
+
+        
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            listBox2.Items.Remove(listBox2.SelectedItem.ToString());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            cmd.CommandText = "insert into project(Group_Name,Project_Name ,Allotment_Date ,Submission_Date,Team_Members ,Mentor ,Detail) values(@Group_Name,@Project_Name ,@Allotment_Date ,@Submission_Date,@Team_Members ,@Mentor ,@Detail)";
+                
+            for (int i = 0; i < listBox2.Items.Count-1;i++ )
+            {
+
+                
+                
+                cmd.Parameters.Add("@Group_Name     ", SqlDbType.VarChar, 50).Value = textBox1.Text;
+                cmd.Parameters.Add("@Project_Name   ", SqlDbType.VarChar, 50).Value = textBox2.Text;
+                cmd.Parameters.Add("@Allotment_Date ", SqlDbType.VarChar, 50).Value = maskedTextBox1.Text;
+                cmd.Parameters.Add("@Submission_Date", SqlDbType.VarChar, 50).Value = maskedTextBox2.Text;
+                cmd.Parameters.Add("@Team_Members   ", SqlDbType.VarChar, 150).Value = listBox2.Items[i].ToString();
+                cmd.Parameters.Add("@Mentor         ", SqlDbType.VarChar, 50).Value = comboBox1.Text;
+                cmd.Parameters.Add("@Detail         ", SqlDbType.VarChar, 150).Value = textBox4.Text;
+
+                
+            }
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox4.Clear();
+            listBox1.Items.Clear();
+            maskedTextBox1.Clear();
+            maskedTextBox2.Clear();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+              if(textBox1.Text.Length>0)
+                {
+
+            SqlCommand cmd1 = new SqlCommand();
+            con.Open();
+            cmd.CommandText = "update project set Group_Name=@Group_Name,Project_Name=@Project_Name,Allotment_Date=@Allotment_Date,Submission_Date=@Submission_Date,Team_Members =@Team_Members ,Mentor =@Mentor ,Detail=@Detail where Group_Name=@Group_Name";
+            cmd.Parameters.Add("@Group_Name     ", SqlDbType.VarChar, 50).Value = textBox1.Text;
+            cmd.Parameters.Add("@Project_Name   ", SqlDbType.VarChar, 50).Value = textBox2.Text;
+            cmd.Parameters.Add("@Allotment_Date ", SqlDbType.VarChar, 50).Value = maskedTextBox1.Text;
+            cmd.Parameters.Add("@Submission_Date", SqlDbType.VarChar, 50).Value = maskedTextBox2.Text;
+            cmd.Parameters.Add("@Team_Members   ", SqlDbType.VarChar, 150).Value = listBox2.Text;
+            cmd.Parameters.Add("@Mentor         ", SqlDbType.VarChar, 50).Value = comboBox1.Text;
+            cmd.Parameters.Add("@Detail         ", SqlDbType.VarChar, 150).Value = textBox4.Text;
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Updated");
+            
+            con.Close();
+            cmd.Dispose();
+            button1.Enabled = true;
+                }
+              else
+              {
+                  MessageBox.Show("Group_Name must be filled", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+              }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox4.Clear();
+            listBox1.Items.Clear();
+            maskedTextBox1.Clear();
+            maskedTextBox2.Clear(); con.Open();
+           
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "select name from project1 where batch='"+comboBox2.SelectedItem.ToString()+"'";
+            cmd.Connection = con;
+            SqlDataReader rd = cmd.ExecuteReader();
+           
+
+            foreach (var name in rd)
+            {
+              listBox1.Items.Add(rd[0].ToString());
+            }
+            con.Close();
+            cmd.Dispose();
+            rd.Dispose();
+        }    
+                      
+    }
+}

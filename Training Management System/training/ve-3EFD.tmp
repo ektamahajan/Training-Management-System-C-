@@ -1,0 +1,300 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+namespace training
+{
+    public partial class regstudent : Form
+    {
+        string combo,radio1,radio2;
+        public regstudent()
+        {
+            InitializeComponent();
+        }
+        SqlConnection con = new SqlConnection("server=.;uid=sa;pwd=sa;database=student");
+        SqlCommand cmd = new SqlCommand();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                radio1 = radioButton1.Text;
+            }
+            if (radioButton2.Checked == true)
+            {
+                radio1 = radioButton2.Text;
+
+            }
+            if (radioButton3.Checked == true)
+            {
+                radio2= radioButton3.Text;
+                combo = comboBox3.SelectedItem.ToString();
+            }
+            if (radioButton4.Checked == true)
+            {
+                radio2= radioButton4.Text;
+                combo = comboBox2.SelectedItem.ToString();
+
+            }
+            
+               
+
+            
+
+            
+             if(textBox1.Text.Length>0)
+            {
+                con.Open();
+                cmd.CommandText = "insert into studata(studentidno,name,fname,dob,sex,unino,address,emailid,contactno,qualification,itback,collegename,coursename,timeperiod,timing,sdate,edate,User_name) values(@studentidno,@name,@fname,@dob,@sex,@unino,@address,@emailid,@contactno,@qualification,@itback,@collegename,@coursename,@timeperiod,@timing,@sdate,@edate,@User_name)";
+                input();
+                cmd.Connection = con;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Inserted");
+               
+                con.Close();
+                cmd.Dispose();
+            filldata();
+            account();
+            clear();
+        }
+        else
+        {
+            MessageBox.Show("Enter information regarding Student", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+            
+        }
+        public void clear()
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            maskedTextBox1.Clear();
+            textBox6.Clear();
+            textBox7.Clear();
+            textBox8.Clear();
+            textBox9.Clear();
+            textBox10.Clear();
+            textBox11.Clear();
+            textBox12.Clear();
+            maskedTextBox2.Clear();
+            maskedTextBox3.Clear();
+            
+        }
+        private void account()
+        {
+            SqlConnection con = new SqlConnection("server=.;uid=sa;pwd=sa;database=general");
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "insert into login(Login_type,User_name,password)values(@Login_type,@User_name,@password)";
+            cmd.Parameters.Add("@Login_type          ", SqlDbType.VarChar, 50).Value = "Student";
+            cmd.Parameters.Add("@User_name           ", SqlDbType.VarChar, 50).Value = textBox1.Text;
+            cmd.Parameters.Add("@password            ", SqlDbType.VarChar, 50).Value = textBox1.Text;
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            textBox1.Clear();
+            textBox2.Clear();
+            cmd.Dispose();
+            con.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+             if(textBox1.Text.Length>0)
+                {
+
+                    SqlCommand cmd1 = new SqlCommand();
+                    con.Open();
+                    cmd1.CommandText = "update studata set studentidno=@studentidno,name=@name,fname=@fname,dob=@dob,sex=@sex,unino=@unino,address=@address,emailid=@emailid,contactno=@contactno,qualification=@qualification,itback=@itback,collegename=@collegename,coursename=@coursename,timeperiod=@timeperiod,timing=@timing,sdate=@sdate,edate=@edate where studentidno=@studentidno";
+                    cmd1.Parameters.AddWithValue("@studentidno", textBox1.Text);
+                    cmd1.Parameters.AddWithValue("@name", textBox2.Text);
+                    cmd1.Parameters.AddWithValue("@fname", textBox3.Text);
+                    cmd1.Parameters.AddWithValue("@dob", maskedTextBox1.Text);
+                    cmd1.Parameters.AddWithValue("@sex", radio1);
+                    cmd1.Parameters.AddWithValue("@unino", textBox6.Text);
+                    cmd1.Parameters.AddWithValue("@address", textBox7.Text);
+                    cmd1.Parameters.AddWithValue("@emailid", textBox8.Text);
+                    cmd1.Parameters.AddWithValue("@contactno", textBox9.Text);
+                    cmd1.Parameters.AddWithValue("@qualification", textBox10.Text);
+                    cmd1.Parameters.AddWithValue("@itback", textBox11.Text);
+                    cmd1.Parameters.AddWithValue("@collegename", textBox12.Text);
+                    cmd1.Parameters.AddWithValue("@timeperiod", radio2);
+                    cmd1.Parameters.AddWithValue("@coursename", combo);
+                    cmd1.Parameters.AddWithValue("@timing", comboBox4.Text);
+                    cmd1.Parameters.AddWithValue("@sdate", maskedTextBox2.Text);
+                    cmd1.Parameters.AddWithValue("@edate", maskedTextBox3.Text);
+                    cmd1.Parameters.AddWithValue("@User_name",textBox1.Text);
+                   
+
+
+                    //cmd.Parameters.AddWithValue("@pic", pictureBox1.Image.ToString());
+                    cmd1.Connection = con;
+                    cmd1.ExecuteNonQuery();
+                    MessageBox.Show("Updated");
+                    clear();
+                    con.Close();
+                    cmd1.Dispose();
+                    button1.Enabled = true;
+            filldata();
+        }
+        else
+        {
+            MessageBox.Show("TeacherIdno must be filled", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+             if(textBox1.Text.Length>0)
+            {
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "delete from studata where studentidno=@studentidno";
+                cmd.Parameters.AddWithValue("@studentidno", textBox1.Text);
+                cmd.Connection = con;
+                con.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Deleted");
+                clear();
+                con.Close();
+                cmd.Dispose();
+            button1.Enabled = true;
+            filldata();
+        }
+        else
+        {
+            MessageBox.Show("TeacherIdno must be filled", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+            
+        }
+
+        string str;
+        private void label19_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog op1 = new OpenFileDialog();
+            op1.InitialDirectory = "c:\\";
+            op1.Filter = "Allfiles(*.all files ) |*.*";
+            op1.FilterIndex = 1;
+            if (op1.ShowDialog(this) == DialogResult.OK)
+            {
+                 str = op1.FileName;
+                pictureBox1.Image = Image.FromFile(str);
+                label19.Visible = false;
+
+            }
+        }
+
+
+        public void input()
+        {
+            cmd.Parameters.AddWithValue("@studentidno", textBox1.Text);
+            cmd.Parameters.AddWithValue("@name", textBox2.Text);
+            cmd.Parameters.AddWithValue("@fname", textBox3.Text);
+            cmd.Parameters.AddWithValue("@dob", maskedTextBox1.Text);
+            cmd.Parameters.AddWithValue("@sex", radio1);
+            cmd.Parameters.AddWithValue("@unino", textBox6.Text);
+            cmd.Parameters.AddWithValue("@address", textBox7.Text);
+            cmd.Parameters.AddWithValue("@emailid", textBox8.Text);
+            cmd.Parameters.AddWithValue("@contactno", textBox9.Text);
+            cmd.Parameters.AddWithValue("@qualification", textBox10.Text);
+            cmd.Parameters.AddWithValue("@itback", textBox11.Text);
+            cmd.Parameters.AddWithValue("@collegename", textBox12.Text);
+            cmd.Parameters.AddWithValue("@timeperiod", radio2);
+            cmd.Parameters.AddWithValue("@coursename", combo);
+            cmd.Parameters.AddWithValue("@timing", comboBox4.Text);
+            cmd.Parameters.AddWithValue("@sdate", maskedTextBox2.Text);
+            cmd.Parameters.AddWithValue("@edate", maskedTextBox3.Text);
+            cmd.Parameters.AddWithValue("@User_name",textBox1.Text);
+            //cmd.Parameters.AddWithValue("@pic", pictureBox1.Image.ToString());
+
+        }
+
+
+        public void filldata()
+        {
+            comboBox1.Items.Clear();
+            cmd.CommandText = "select studentidno from studata";
+            cmd.Connection = con;
+            con.Open();
+            SqlDataReader rd = cmd.ExecuteReader();
+            while (rd.Read())
+            {
+                comboBox1.Items.Add(rd[0].ToString());
+            }
+            rd.Close();
+            cmd.Dispose();
+            con.Close();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            filldata();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "select * from studata where studentidno=@studentidno";
+            cmd.Parameters.AddWithValue("@studentidno", comboBox1.SelectedItem.ToString());
+            cmd.Connection = con;
+            SqlDataReader rd = cmd.ExecuteReader();
+            rd.Read();
+            textBox1.Text = rd[0].ToString();
+            textBox2.Text = rd[1].ToString();
+            textBox3.Text = rd[2].ToString();
+            maskedTextBox1.Text = rd[3].ToString();
+            radio1 = rd[4].ToString();
+            textBox6.Text = rd[5].ToString();
+            textBox7.Text = rd[6].ToString();
+            textBox8.Text = rd[7].ToString();
+            textBox9.Text = rd[8].ToString();
+            textBox10.Text = rd[9].ToString();
+            textBox11.Text = rd[10].ToString();
+            textBox12.Text = rd[11].ToString();
+            radio2= rd[12].ToString();
+            combo = rd[13].ToString();
+            comboBox4.Text = rd[14].ToString();
+            maskedTextBox2.Text = rd[15].ToString();
+            maskedTextBox3.Text = rd[16].ToString();
+            
+            con.Close();
+            rd.Dispose();
+            cmd.Dispose();
+            button1.Enabled = false;
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton4.Checked == true)
+            {
+                comboBox2.Enabled = true;
+                comboBox3.Enabled = false;
+               
+            
+            }
+            
+            
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton3.Checked == true)
+            {
+                comboBox3.Enabled = true;
+                comboBox2.Enabled = false;
+                
+            }
+            
+
+        }
+
+  
+    }
+}

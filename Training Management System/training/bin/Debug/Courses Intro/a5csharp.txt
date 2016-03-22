@@ -1,0 +1,27 @@
+Microsoft C-Sharp (C#) 
+
+Imparting the know how of making Console applications. 
+
+   Specifications
+
+Name : Microsoft C-Sharp(c#) 
+Duration : 1½ month 
+
+   Contents
+•     .NET Framework Overview 
+•     The Common Language Runtime 
+•     The Common Type System 
+•     The .NET Framework Base Class Library 
+•     Instantiating and Using Classes, Building Class Hierarchies 
+•     Inheriting from the Object Class,Sealed Classes 
+•     Abstract Classes and Polymorphism 
+•     Using .NET Namespaces 
+•     Value Types vs. Reference Types 
+•     Variables, Data Types, Function 
+•     Command Line Compiler Options,Hiding Inherited Methods 
+•     Using Value Types, Creating Value Types,Interfaces, Overloading,Boxing,Casting & Conversions 
+•     Using Reference Types,Using Hash codes, Object Identity,Interface Casting, Public Constructors,Private Constructors, Static Constructors,Indexers, User Defined Conversions 
+•     Delegates Explained, Callbacks & Delegates, Singlecast Delegates, Multicast Delegates, Event-Driven Programming Model, Relationship between Delegates and Events, Using Events in C# 
+•     Threading Concepts, Thread Basics, Creating Threads in C#, Problems with Threads, Thread Management, Thread Synchronization 
+•     Interacting with the File System, Manipulating Files and Directories, Readers and Writers, Stream Objects, Object Serialization, Using FileSystemWatcher, Processing XML Documents 
+

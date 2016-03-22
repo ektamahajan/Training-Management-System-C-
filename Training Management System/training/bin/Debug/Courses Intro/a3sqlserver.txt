@@ -1,0 +1,18 @@
+SQL Server 2000 
+
+This Course provides the ability to administer and troubleshoot information system that incorporate Microsoft SQL Server 2000. 
+
+
+Specifications 
+
+Name : SQL Server 2000 
+Duration : 1½ month 
+
+ Contents 
+•   Installing and Configuring SQL Server 2000 
+•   Creating SQL Server 2000 Database 
+•   Managing, Monitoring and Troubleshooting SQL Server 2000 Databse 
+•   Extracting and Transforming Data with SQL Server 2000 
+•   Managing and Monitoring SQL Server 2000 Security 
+•   Managing, Monitoring and Troubleshooting SQL Server 2000 
+

@@ -1,0 +1,143 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace training
+{
+    public partial class student : Form
+    {
+        public student()
+        {
+            InitializeComponent();
+        }
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
+            panelhide();
+        }
+
+        private void label1_MouseHover(object sender, EventArgs e)
+        {
+            label1.BackColor = Color.DeepSkyBlue;
+            panelhide();
+            tabControl1.Visible = true;
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+            label1.BackColor = Color.LightBlue;
+        }
+
+        private void label2_MouseHover(object sender, EventArgs e)
+        {
+            label2.BackColor = Color.DeepSkyBlue;
+            panelhide();
+            panel1.Visible = true;
+
+        }
+
+        private void label2_MouseLeave(object sender, EventArgs e)
+        {
+            label2.BackColor = Color.LightBlue;
+        }
+
+        private void label3_MouseLeave(object sender, EventArgs e)
+        {
+            label3.BackColor = Color.LightBlue;
+        }
+
+      
+
+        private void label4_MouseLeave(object sender, EventArgs e)
+        {
+            label4.BackColor = Color.LightBlue;
+        }
+
+        private void label3_MouseHover(object sender, EventArgs e)
+        {
+            label3.BackColor = Color.DeepSkyBlue;
+            panelhide();
+            splitContainer1.Visible = true;
+        }
+
+        private void label4_MouseHover(object sender, EventArgs e)
+        {
+            label4.BackColor = Color.DeepSkyBlue;
+            panelhide();
+            splitContainer2.Visible = true;
+        }
+
+        private void label5_MouseHover(object sender, EventArgs e)
+        {
+            label5.BackColor = Color.DeepSkyBlue;
+            panelhide();
+            panel2.Visible = true;
+        }
+
+        private void label5_MouseLeave(object sender, EventArgs e)
+        {
+            label5.BackColor = Color.LightBlue;
+        }
+
+        private void label6_MouseHover(object sender, EventArgs e)
+        {
+            label6.BackColor = Color.DeepSkyBlue;
+
+        }
+
+        private void label6_MouseLeave(object sender, EventArgs e)
+        {
+            label6.BackColor = Color.LightBlue;
+        }
+
+        private void label7_MouseHover(object sender, EventArgs e)
+        {
+            label7.BackColor = Color.DeepSkyBlue;
+        }
+
+        private void label7_MouseLeave(object sender, EventArgs e)
+        {
+            label7.BackColor = Color.LightBlue;
+        }
+
+        private void label8_MouseHover(object sender, EventArgs e)
+        {
+            label8.BackColor = Color.DeepSkyBlue;
+        }
+
+        private void label8_MouseLeave(object sender, EventArgs e)
+        {
+            label8.BackColor = Color.LightBlue;
+        }
+        public void panelhide()
+        {
+            tabControl1.Visible = false;
+            panel1.Visible = false;
+            splitContainer1.Visible = false;
+            splitContainer2.Visible = false;
+            panel2.Visible = false;
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            Form8 f8 = new Form8();
+            f8.Show();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            login f2 = new login();
+            f2.Show();
+        }
+
+        
+        
+    }
+}

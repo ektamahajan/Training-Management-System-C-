@@ -1,0 +1,303 @@
+Module 1-Total Days-20
+
+Introduction to .Net framework:
+?	History of .net
+?	.net framework
+?	.net version
+?	Features/advantages of .net
+?	Architecture of .net framework
+?	CLR/CTS
+?	Namespaces
+
+Programming in C#:
+?	Programming structure
+?	Variables/Constants
+?	Datatypes
+?	Various operators
+?	Type conversion
+?	Decision Making & branching
+?	Decision Making & looping
+
+Methods in C#:
+?	Introduction to Methods
+?	Argument passing mechanism
+?	Pass by value
+?	Pass by reference
+?	Output parameters
+?	Arrays
+?	Manipulating strings
+?	Structures & enumerations
+
+OOPS Principle:
+
+?	Basic principles of OOPS
+?	Class & Object
+?	Access modifiers
+?	Constructors & destructors
+?	Static members
+?	Property procedures
+?	this reference
+?	Nested classes
+Inheritance & Polymorphism:                                           
+
+?	Inheritance & polymorphism
+?	Overloading methods
+?	Hiding methods
+?	Abstract class
+?	Abstract methods
+?	Sealed class
+?	Sealed methods
+?	Multiple inheritance
+?	Interfaces
+?	Operator overloading
+?	Managing console
+?	Multithreading
+
+________________________________________________________________________
+
+Module 2-Total Days-30
+
+
+Windows Programming:
+
+?	Introduction to IDE
+?	Introduction to Window Forms
+?	Various controls
+?	Invoking properties,methods & events in window forms
+
+Dialog Boxes,Menus & Toolbar
+
+?	Dialog Boxes
+?	Menus & Toolbar
+
+SDI & MDI application
+?	SDI forms
+?	MDI forms
+
+Class Libraries
+?	Creating & using classes
+?	Creating & Using class libraries
+
+
+
+
+
+Creating Components
+
+?	Creating User controls
+?	Accessing User Controls
+?	Composite controls                                                                                      
+
+ADO.net
+
+?	Introduction to ADO.net
+?	Architecture of ADO.net
+?	Accessing data through connection oriented and connectionless approach
+?	Accessing data with datareader
+?	Manipulating data using ADO.net
+?	Using data adapters
+?	Using DataSet
+?	Datagridview control
+?	Using Multiple tables
+?	Accessing stored procedures
+
+Exception Handling & Debugging in C#
+?	Exception Handling
+?	Debugging Machanism
+
+
+Crystal Reports
+
+?	Creating Crystal Reports
+?	Invoking reports on window forms
+?	Charts & Crosstabs
+
+Setup & Deployment 
+
+?	Deploying a window application
+?	Assembly Overview
+
+
+--------------------------------------------------------------------------
+
+Module 3-Total Days-15
+
+?	Features of MS-SQL server
+?	SQL-DDL,DML,DCL
+
+Using Select Statement
+
+?	Use the SELECT statement with logical operators
+?	Use wildcards
+?	Use the IS NULL and IS NOT NULL keywords
+?	Use the ORDER BY clause
+?	Use the TOP keyword                                                                                                          
+?	Use the DISTINCT keyword 
+?	Use aggregate functions in queries
+?	Group result sets
+?	Use the COMPUTE and COMPUTE BY clause 
+
+Using functions
+?	String functions
+?	Mathematical functions
+?	Datetime functions
+
+Using JOINS
+?	Inner Join
+?	Outer Join
+?	Self Join
+?	Equi Join
+?	Natural Join
+?	Cross Join
+
+Using Subqueries
+?	Creating subqueries
+?	Use subqueries with the IN clause
+?	Use subqueries with the  EXISTS clause
+?	Use nested subqueries
+?	Use correlated subqueries
+
+Databases
+?	Creating database
+?	Viewing database
+?	Deleting database
+?	Renaming database
+Database Tables
+
+?	Create tables
+?	Insert rows into tables
+?	Delete tables
+?	Altering tables
+?	Create user-defined datatype
+?	List various types of data integrity 
+?	Add the following constraints to tables:
+o	PRIMARY KEY
+o	UNIQUE 
+o	FOREIGN KEY                                                                            
+o	CHECK 
+o	DEFAULT 
+
+DML Statement
+?	Maintain data in a table by using
+o	INSERT statement
+o	UPDATE statement
+o	DELETE statement
+?	Truncate a table
+
+Implementing Views & Batches
+?	Create, alter, drop, and rename views 
+?	Update data using views 
+?	Declare variables
+?	Print messages
+?	Use comments
+?	Use conditional statements
+?	Use the iteration statements
+
+Implementing Stored Procedures
+?	Create a stored procedure
+?	Execute a stored procedure
+?	Pass parameters to a stored procedure
+?	Modify a stored procedure
+?	Return values from a stored procedure
+?	Return multiple values from a stored procedure 
+?	Call a procedure from another stored procedure
+?	Recompile a stored procedure
+?	Drop a stored procedure
+
+Backup & Recovery Procedure
+----------------------------------------------------------------------------
+Module 4-Minor Project(Window Based)-Total Days-10                                  
+
+
+Module 5-Total Days-25
+
+Overview of ASP.net
+
+?	Features of ASP.net
+?	Creating an ASP.net web application
+?	Create, build and view an ASP.net web form
+
+Using Controls
+
+?	Using Server controls
+?	Using Client controls
+
+Using Navigation Controls
+?	Using TreeView control
+?	Using Menu Control
+?	Using SiteMapPath
+
+
+Adding code to ASP.net web form
+
+?	Using code behind pages
+?	Adding event procedures to web server controls
+?	Using page events
+
+Adding functionality to a Web application
+
+?	Creating Page_Load event procedure
+?	Creating Click event procedure
+
+Validating User Input
+?	Overview of user input validation
+?	Using validation controls
+?	Page validation
+?	RequiredFieldValidator control
+?	ValidationSummary control
+?	CompareValidator control
+?	RegularExpressionValidator control
+?	RangeValidator control
+
+
+Using Master Files
+?	Creating Master pages                                                                                  
+?	Applying styles to web pages
+?	Applying themes
+?	Using Skin files
+
+Creating User Controls
+?	Creating web user controls
+?	Adding web user controls to an ASP.net web forms
+
+ADO.net
+
+?	Connecting with database using ADO.net
+?	Connected & Disconnected approach
+?	Using stored procedure in ASP.net application
+
+Using Data Controls
+?	DataGrid control
+?	DetailsView
+?	FormView
+?	Repeater control
+?	DataList control
+
+Managing State
+?	Application & State Management
+?	Application variables
+?	Session variables
+?	Cookies
+?	Caching Mechnism
+Tracing in Web Application
+?	Understanding Tracing
+?	Implementing Tracing
+
+Security in Web Application
+
+?	Web application security overview
+?	Authentication & Authorization
+
+-------------------------------------------------------------
+                                                                                                                        
+Module 6-Total Days-10
+
+XML & Web Services 
+Advanced Technology overview
+
+
+Module 7-Total Days-60
+Major Project(Window based/Web based)
+
+Note: 10 Days are reserved for Assignment/Module Tests/Presentations.
+
